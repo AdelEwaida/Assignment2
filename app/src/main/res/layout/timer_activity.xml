@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+<GridLayout
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    android:paddingTop="20dp">
+    <![CDATA[ xmlns:android="http://schemas.android.com/apk/res/android" />
+    ]]>
+
+    <TextView
+        android:layout_width="95dp"
+        android:layout_height="36dp"
+        android:layout_row="0"
+        android:layout_column="1"
+android:textAlignment="center"
+        android:text="@string/hours"></TextView>
+
+    <TextView
+        android:layout_width="95dp"
+        android:layout_height="36dp"
+        android:layout_row="0"
+        android:layout_column="2"
+        android:textAlignment="center"
+
+        android:text="@string/minutes"></TextView>
+
+    <TextView
+        android:layout_width="95dp"
+        android:layout_height="36dp"
+        android:layout_row="0"
+        android:layout_column="3"
+
+        android:text="@string/seconds"></TextView>
+
+    <TextView
+        android:layout_width="99dp"
+        android:layout_height="60dp"
+        android:layout_row="1"
+        android:layout_column="0"
+        android:text="@string/set_timer"
+        android:textAlignment="center"></TextView>
+
+    <Spinner
+        android:id="@+id/shours"
+        android:layout_width="99dp"
+        android:layout_height="60dp"
+        android:layout_row="1"
+        android:layout_column="1"
+
+        android:gravity="center" />
+
+    <Spinner
+        android:id="@+id/sminutes"
+        android:layout_width="99dp"
+        android:layout_height="60dp"></Spinner>
+
+    <Spinner
+        android:id="@+id/sseconds"
+        android:layout_width="99dp"
+        android:layout_height="60dp"
+        android:layout_row="1"
+        android:layout_column="3"></Spinner>
+</GridLayout>
+
+
+<TableRow
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="10dp"
+    android:gravity="center">
+        <TextView
+            android:id="@+id/txtView"
+            android:layout_width="375dp"
+            android:layout_height="148dp"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:text="Hello World!"
+            android:textAppearance="@android:style/TextAppearance.Large"
+            android:textSize="56sp"
+
+            ></TextView> </TableRow>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:paddingTop="300dp">
+        <Button
+            android:id="@+id/btnStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:onClick="onClickStart"
+            android:text="Start" />
+
+        <Button
+            android:id="@+id/btnStop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:onClick="onClickStop"
+            android:text="Stop" />
+
+        <Button
+            android:id="@+id/btnReset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:onClick="onClickReset"
+            android:text="Reset" />
+
+    </TableRow>
+
+
+
+</RelativeLayout>
