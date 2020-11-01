@@ -4,8 +4,8 @@
     <string name="name">Name</string>
     <string name="nameField"></string>
     <string name="save">Save</string>
-    <string name="switch1">switch</string>
-    <string name="height">height</string>
+    <string name="switch1">Timer Act</string>
+    <string name="height">Height in meter</string>
     <string name="heightField"></string>
     <string name="weight">Weight</string>
     <string name="weightField"></string>
@@ -17,4 +17,7 @@
     <string name="hours">Hours</string>
     <string name="minutes">Minutes</string>
     <string name="seconds">Seconds</string>
+    <string name="switch2">Switch2</string>
+    <string name="pause">Pause</string>
+    <string name="stop">Stop</string>
 </resources>

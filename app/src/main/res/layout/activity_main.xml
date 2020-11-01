@@ -8,188 +8,242 @@
     android:orientation="vertical"
 android:layout_marginTop="20dp"
     tools:context=".MainActivity">
-<TableRow
-    android:layout_width="match_parent"
-    android:layout_height="50dp"
-    >
+
     <TextView
+        android:id="@+id/welcome"
         android:layout_width="wrap_content"
         android:layout_height="44dp"
         android:orientation="vertical"
         android:text="Please enter these informations about you"
         android:textSize="20dp"
-        tools:layout_editor_absoluteX="4dp"
-        tools:layout_editor_absoluteY="39dp" />
-</TableRow>
+ />
 
     <TableRow
+        android:id="@+id/row1"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-android:paddingTop="50dp"
-      >
+        android:layout_height="80dp"
+        android:layout_alignBottom="@+id/welcome"
+        android:layout_marginBottom="-86dp">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/namelabel"
+            android:layout_width="88dp"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+
             android:text="@string/name"
-            android:textSize="20dp"
-            tools:layout_editor_absoluteX="4dp"
-            tools:layout_editor_absoluteY="39dp" />
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="20dp" />
+
         <EditText
-             android:id="@+id/namee"
-            android:text="@string/nameField"
-            android:layout_width="265dp"
-            android:layout_height="30dp"
-            android:layout_gravity="left"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="10dp"
-            tools:layout_editor_absoluteY="89dp" />
+            android:id="@+id/namee"
+            android:layout_width="242dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="15dp"
+            android:paddingLeft="40dp"
+            android:paddingTop="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+          android:textAlignment="center"
+            android:text="@string/nameField" />
     </TableRow>
-
-
     <TableRow
+        android:id="@+id/row2"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:paddingTop="100dp"
-        >
-
+        android:layout_height="80dp"
+        android:layout_alignBottom="@+id/row1"
+        android:layout_marginBottom="-86dp">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/heightlabel1"
+            android:layout_width="106dp"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
             android:text="@string/height"
-            android:textSize="20dp"
-            tools:layout_editor_absoluteX="4dp"
-            tools:layout_editor_absoluteY="39dp" />
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="20dp" />
 
-        <EditText
-            android:id="@+id/heightTextEdit"
-            android:text="@string/heightField"
-            android:layout_width="265dp"
-            android:layout_height="30dp"
-            android:layout_gravity="left"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="10dp"
-            tools:layout_editor_absoluteY="89dp" />
+            <EditText
+                android:id="@+id/height"
+                android:layout_width="242dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp"
+                android:textAlignment="center"
+                android:text="@string/heightField"  />
+
+
     </TableRow>
-
     <TableRow
+        android:id="@+id/row3"
         android:layout_width="match_parent"
-        android:layout_height="400dp"
-        android:paddingTop="150dp"
-        >
-
+        android:layout_height="80dp"
+        android:layout_alignBottom="@+id/row2"
+        android:layout_marginBottom="-86dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
             android:text="@string/weight"
-            android:textSize="20dp"
-            tools:layout_editor_absoluteX="4dp"
-            tools:layout_editor_absoluteY="39dp" />
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="20dp" />
+
         <EditText
             android:id="@+id/weightTextEdit"
+            android:layout_width="242dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="15dp"
+            android:paddingLeft="40dp"
+            android:paddingTop="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
             android:text="@string/weightField"
-            android:layout_width="265dp"
-            android:paddingTop="20dp"
-            android:layout_height="30dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="10dp"
-            tools:layout_editor_absoluteY="89dp"
-          />
+            android:textAlignment="center" />
     </TableRow>
     <TableRow
+        android:id="@+id/row4"
         android:layout_width="match_parent"
-        android:layout_height="500dp"
-        android:paddingTop="200dp"
-        >
+        android:layout_height="80dp"
+        android:layout_alignBottom="@+id/row3"
+        android:layout_marginBottom="-86dp">
 
-
-    <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/gender"
-            android:textSize="20dp"
-            tools:layout_editor_absoluteX="4dp"
-            tools:layout_editor_absoluteY="39dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp"
+                android:text="@string/gender"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="20dp" />
 
         <Spinner
             android:id="@+id/genderSpinner"
-            android:layout_width="153dp"
-            android:layout_height="35dp"
-            android:layout_gravity="top
-"
-            android:layout_marginLeft="10dp"
-
+            android:layout_width="149dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
             android:layout_marginBottom="10dp"
-            android:prompt="@string/app_name"></Spinner>
+           ></Spinner>
     </TableRow>
     <TableRow
+        android:id="@+id/row5"
         android:layout_width="match_parent"
-        android:layout_height="450dp"
-        android:paddingTop="100dp"
-        >
-
-    <Button
-        android:id="@+id/bsavee"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_margin="8dp"
-        android:onClick="onClick"
-        android:orientation="vertical"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="10dp"
-        android:text="@string/save"
-        tools:layout_editor_absoluteX="175dp"
-        tools:layout_editor_absoluteY="168dp" />
-    <Button
-        android:id="@+id/bswitchh"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_margin="8dp"
-        android:onClick="onClick2"
-        android:orientation="vertical"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="10dp"
-        android:text="@string/switch1"
-        tools:layout_editor_absoluteX="175dp"
-        tools:layout_editor_absoluteY="168dp" />
-    </TableRow>
-    <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:paddingTop="350dp"
-        >
-
-        <TextView
-            android:layout_width="65dp"
-            android:layout_height="65dp"
+        android:layout_height="80dp"
+        android:layout_alignBottom="@+id/row4"
+        android:layout_marginBottom="-86dp"
+        android:gravity="center">
+        <Button
+                android:id="@+id/bsavee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="8dp"
+                android:onClick="onClick"
+                android:orientation="vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/save"
+                tools:layout_editor_absoluteX="175dp"
+                tools:layout_editor_absoluteY="168dp" />
+            <Button
+                android:id="@+id/bswitchh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="8dp"
+                android:onClick="onClick2"
+                android:orientation="vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/switch1"
+                tools:layout_editor_absoluteX="175dp"
+                tools:layout_editor_absoluteY="168dp" />
+        <Button
+            android:id="@+id/bswitchh2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="8dp"
+            android:onClick="onClick3"
             android:orientation="vertical"
-            android:text="@string/bmi"
-            android:textSize="20dp"
-            tools:layout_editor_absoluteX="4dp"
-            tools:layout_editor_absoluteY="39dp" />
-
-        <EditText
-            android:id="@+id/BMITextEdit"
-            android:layout_width="265dp"
-            android:layout_height="81dp"
-            android:layout_gravity="left"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="20dp"
-            android:layout_marginRight="10dp"
             android:layout_marginBottom="10dp"
-            android:text="@string/bmiField"
-            tools:layout_editor_absoluteY="89dp" />
+            android:text="@string/switch2"
+            tools:layout_editor_absoluteX="175dp"
+            tools:layout_editor_absoluteY="168dp" />
+    </TableRow>
+    <TableRow
+        android:id="@+id/row6"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignBottom="@+id/row5"
+        android:layout_marginBottom="-86dp"
+>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="@string/bmi"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/black"
+                    android:textSize="20dp" />
+
+                <EditText
+                    android:id="@+id/BMITextEdit"
+                    android:layout_width="242dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="15dp"
+                    android:paddingLeft="40dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="@string/bmiField"
+                    android:textAlignment="center" />
     </TableRow>
 </RelativeLayout>

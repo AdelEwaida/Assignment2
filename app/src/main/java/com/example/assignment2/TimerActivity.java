@@ -12,6 +12,7 @@ import android.os.Handler;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Locale;
 import androidx.annotation.Nullable;
@@ -29,6 +30,9 @@ public class TimerActivity extends Activity {
     private Spinner spinner1;
     private Spinner spinner2;
     private Spinner spinner3;
+    TextView txtView = null;
+
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -50,9 +54,9 @@ public class TimerActivity extends Activity {
 
 
 public void fillspinners(){
-//        hours[0]= "0 hours";
-//        minutes[0]= "0 min";
-//        secondss[0]= "0 sec";
+    hours = new String[24];
+    minutes = new String[60];
+    secondss = new String[60];
     for(int i =0;i<24;i++) {
         hours[i] = String.valueOf(i);
     }
@@ -68,19 +72,21 @@ public void fillspinners(){
     ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, hours);
     arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
     spinner1.setAdapter(arrayAdapter);
-
-
-   arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, minutes);
+     arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, minutes);
     arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
     spinner2.setAdapter(arrayAdapter);
     arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, secondss);
     arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
     spinner3.setAdapter(arrayAdapter);
 }
-        public void onClickStart(View view) {
-            running = true;
-            runTimer();
+int count =0;
 
+        public void onClickStart(View view) {
+            if(count<=0){
+                runTimer();
+            count++;
+            }
+            running = true;
         }
 
         public void onClickStop(View view) {
@@ -88,11 +94,30 @@ public void fillspinners(){
         }
 
         public void onClickReset(View view) {
+            running = false;
+                  }
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Toast.makeText(getApplicationContext(), "onStart called", Toast.LENGTH_LONG).show();
+    }
 
-            running = true;
-            runTimer();
 
-        }
+    @Override
+    protected void onResume() {
+
+        super.onResume();
+        Toast.makeText(getApplicationContext(), "onResumed called", Toast.LENGTH_LONG).show();
+
+    }
+    @Override
+    protected void onPause() {
+
+        super.onPause();
+        super.onResume();
+        Toast.makeText(getApplicationContext(), "onPause called", Toast.LENGTH_LONG).show();
+
+    }
         private void runTimer(){
             String spin1 = spinner1.getSelectedItem().toString();
             String spin2 = spinner2.getSelectedItem().toString();
@@ -101,7 +126,7 @@ public void fillspinners(){
              final int min1=Integer.parseInt(spin2);
              final int sec1=Integer.parseInt(spin3);
             seconds=(hours1*3600)+(min1*60)+sec1;
-            final TextView txtView = (TextView) findViewById(R.id.txtView);
+
             final Handler handler = new Handler();
             handler.post(new Runnable() {
                 @Override
@@ -110,15 +135,17 @@ public void fillspinners(){
                     int hours = seconds/3600;
                     int minutes = seconds % 3600 /60;
                     int snds = seconds % 60;
-                    String time = String.format(Locale.getDefault(),
-                            "%d:%02d:%02d", hours, minutes, snds);
+                    String time = String.format(Locale.getDefault(), "%d:%02d:%02d", hours, minutes, snds);
+                txtView = (TextView) findViewById(R.id.txtView);
+
                     txtView.setText(time);
                     if(running){
                     if(seconds==0)
                          running=false;
                     else
-                        seconds--;
+                        --seconds;
                     }
+
                     handler.postDelayed(this, 1000);
                 }
             });

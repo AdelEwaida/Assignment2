@@ -65,7 +65,7 @@ private void checkPref(){
     String bmi1 = prefrence.getString(bmiii,"");
     nameE = findViewById(R.id.namee);
     massE = findViewById(R.id.weightTextEdit);
-    heightE= findViewById(R.id.heightTextEdit);
+    heightE= findViewById(R.id.height);
     bmiE =findViewById(R.id.BMITextEdit);
     nameE.setText(name1);
     massE.setText(mass1);
@@ -80,9 +80,9 @@ private void checkPref(){
         EditText masss = (EditText) this.findViewById(R.id.weightTextEdit);
         Editable word =masss.getText();
         double mass1 = Double.parseDouble(String.valueOf(word));
-        EditText heightt = (EditText) this.findViewById(R.id.heightTextEdit);
+        EditText heightt = (EditText) this.findViewById(R.id.height);
         Editable word2 =heightt.getText();
-        double height1 = Double.parseDouble(String.valueOf(word));
+        double height1 = Double.parseDouble(String.valueOf(word2));
         double height2 =Math.pow(height1,2);
         double bmi = mass1/height2;
         EditText res = (EditText) this.findViewById(R.id.BMITextEdit);
@@ -102,11 +102,15 @@ private void checkPref(){
         editor.putString(gender, spin);
         editor.putString(bmiii, String.valueOf(bmi2));
         editor.commit();
-        Toast.makeText(MainActivity.this,"Thanks",Toast.LENGTH_LONG).show();
     }
 
     public void onClick2(View view) {
         Intent intent = new Intent(this, TimerActivity.class);
+        startActivity(intent);
+    }
+
+    public void onClick3(View view) {
+        Intent intent = new Intent(this, ThirdAct.class);
         startActivity(intent);
     }
 }

@@ -76,7 +76,7 @@ android:textAlignment="center"
             android:layout_height="148dp"
             android:layout_gravity="center"
             android:textAlignment="center"
-            android:text="Hello World!"
+            android:text="Set Timer"
             android:textAppearance="@android:style/TextAppearance.Large"
             android:textSize="56sp"
 
@@ -101,7 +101,7 @@ android:textAlignment="center"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:onClick="onClickStop"
-            android:text="Stop" />
+            android:text="@string/pause" />
 
         <Button
             android:id="@+id/btnReset"
@@ -109,7 +109,7 @@ android:textAlignment="center"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:onClick="onClickReset"
-            android:text="Reset" />
+            android:text="@string/stop" />
 
     </TableRow>
 
