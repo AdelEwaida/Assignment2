@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:layout_margin="10dp"
     android:orientation="vertical"
-android:layout_marginTop="20dp"
+    android:layout_marginTop="20dp"
     tools:context=".MainActivity">
 
     <TextView
@@ -27,32 +27,15 @@ android:layout_marginTop="20dp"
 
         <TextView
             android:id="@+id/namelabel"
-            android:layout_width="88dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="15dp"
-            android:gravity="center"
-            android:paddingLeft="10dp"
-            android:paddingTop="10dp"
-            android:paddingRight="10dp"
-            android:paddingBottom="10dp"
-
+            style="@style/TVStyle"
             android:text="@string/name"
-            android:textAlignment="center"
             android:textColor="@android:color/black"
-            android:textSize="20dp" />
+       />
 
         <EditText
             android:id="@+id/namee"
-            android:layout_width="242dp"
-            android:layout_height="wrap_content"
+            style="@style/TFStyle"
             android:layout_marginLeft="30dp"
-            android:layout_marginTop="15dp"
-            android:paddingLeft="40dp"
-            android:paddingTop="10dp"
-            android:paddingRight="10dp"
-            android:paddingBottom="10dp"
-          android:textAlignment="center"
             android:text="@string/nameField" />
     </TableRow>
     <TableRow
@@ -64,32 +47,19 @@ android:layout_marginTop="20dp"
 
         <TextView
             android:id="@+id/heightlabel1"
-            android:layout_width="106dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="15dp"
-            android:gravity="center"
-            android:paddingLeft="10dp"
-            android:paddingTop="10dp"
-            android:paddingRight="10dp"
-            android:paddingBottom="10dp"
+            style="@style/TVStyle"
             android:text="@string/height"
-            android:textAlignment="center"
-            android:textColor="@android:color/black"
-            android:textSize="20dp" />
+            android:layout_width="106dp"
+            android:textColor="@android:color/black" />
 
             <EditText
                 android:id="@+id/height"
-                android:layout_width="242dp"
-                android:layout_height="wrap_content"
+                style="@style/TFStyle"
+
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="15dp"
-                android:paddingLeft="10dp"
-                android:paddingTop="10dp"
-                android:paddingRight="10dp"
-                android:paddingBottom="10dp"
-                android:textAlignment="center"
-                android:text="@string/heightField"  />
+                android:text="@string/heightField"
+
+                />
 
 
     </TableRow>
@@ -101,32 +71,16 @@ android:layout_marginTop="20dp"
         android:layout_marginBottom="-86dp">
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="15dp"
-            android:gravity="center"
-            android:paddingLeft="10dp"
-            android:paddingTop="10dp"
-            android:paddingRight="10dp"
-            android:paddingBottom="10dp"
+            android:id="@+id/weigth"
+            style="@style/TVStyle"
             android:text="@string/weight"
-            android:textAlignment="center"
-            android:textColor="@android:color/black"
-            android:textSize="20dp" />
+            android:textColor="@android:color/black" />
 
         <EditText
             android:id="@+id/weightTextEdit"
-            android:layout_width="242dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="15dp"
-            android:paddingLeft="40dp"
-            android:paddingTop="10dp"
-            android:paddingRight="10dp"
-            android:paddingBottom="10dp"
+            style="@style/TFStyle"
             android:text="@string/weightField"
-            android:textAlignment="center" />
+          />
     </TableRow>
     <TableRow
         android:id="@+id/row4"
@@ -136,19 +90,9 @@ android:layout_marginTop="20dp"
         android:layout_marginBottom="-86dp">
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="15dp"
-                android:gravity="center"
-                android:paddingLeft="10dp"
-                android:paddingTop="10dp"
-                android:paddingRight="10dp"
-                android:paddingBottom="10dp"
+                style="@style/TVStyle"
                 android:text="@string/gender"
-                android:textAlignment="center"
-                android:textColor="@android:color/black"
-                android:textSize="20dp" />
+                android:textColor="@android:color/black" />
 
         <Spinner
             android:id="@+id/genderSpinner"
@@ -170,46 +114,22 @@ android:layout_marginTop="20dp"
         android:gravity="center">
         <Button
                 android:id="@+id/bsavee"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_margin="8dp"
+                style="@style/BStyle"
                 android:onClick="onClick"
-                android:orientation="vertical"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="10dp"
                 android:text="@string/save"
-                tools:layout_editor_absoluteX="175dp"
-                tools:layout_editor_absoluteY="168dp" />
+         />
             <Button
                 android:id="@+id/bswitchh"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_margin="8dp"
+                style="@style/BStyle"
                 android:onClick="onClick2"
-                android:orientation="vertical"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="10dp"
                 android:text="@string/switch1"
-                tools:layout_editor_absoluteX="175dp"
-                tools:layout_editor_absoluteY="168dp" />
+               />
         <Button
             android:id="@+id/bswitchh2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="8dp"
+            style="@style/BStyle"
             android:onClick="onClick3"
-            android:orientation="vertical"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="10dp"
             android:text="@string/switch2"
-            tools:layout_editor_absoluteX="175dp"
-            tools:layout_editor_absoluteY="168dp" />
+            />
     </TableRow>
     <TableRow
         android:id="@+id/row6"
@@ -219,31 +139,13 @@ android:layout_marginTop="20dp"
         android:layout_marginBottom="-86dp"
 >
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="15dp"
-                    android:gravity="center"
-                    android:paddingLeft="10dp"
-                    android:paddingTop="10dp"
-                    android:paddingRight="10dp"
-                    android:paddingBottom="10dp"
+                    style="@style/TVStyle"
                     android:text="@string/bmi"
-                    android:textAlignment="center"
-                    android:textColor="@android:color/black"
-                    android:textSize="20dp" />
+                    android:textColor="@android:color/black" />
 
                 <EditText
                     android:id="@+id/BMITextEdit"
-                    android:layout_width="242dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginTop="15dp"
-                    android:paddingLeft="40dp"
-                    android:paddingTop="10dp"
-                    android:paddingRight="10dp"
-                    android:paddingBottom="10dp"
-                    android:text="@string/bmiField"
-                    android:textAlignment="center" />
+                    style="@style/TFStyle"
+                    android:text="@string/bmiField" />
     </TableRow>
 </RelativeLayout>

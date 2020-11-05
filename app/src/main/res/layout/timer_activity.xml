@@ -10,28 +10,21 @@ android:layout_height="match_parent"
     ]]>
 
     <TextView
-        android:layout_width="95dp"
-        android:layout_height="36dp"
+        style="@style/TimerTextViewStyle"
         android:layout_row="0"
         android:layout_column="1"
-android:textAlignment="center"
         android:text="@string/hours"></TextView>
 
     <TextView
-        android:layout_width="95dp"
-        android:layout_height="36dp"
+      style="@style/TimerTextViewStyle"
         android:layout_row="0"
         android:layout_column="2"
-        android:textAlignment="center"
-
         android:text="@string/minutes"></TextView>
 
     <TextView
-        android:layout_width="95dp"
-        android:layout_height="36dp"
+        style="@style/TimerTextViewStyle"
         android:layout_row="0"
         android:layout_column="3"
-
         android:text="@string/seconds"></TextView>
 
     <TextView
@@ -44,22 +37,19 @@ android:textAlignment="center"
 
     <Spinner
         android:id="@+id/shours"
-        android:layout_width="99dp"
-        android:layout_height="60dp"
+        style="@style/SpinnerStyle"
         android:layout_row="1"
         android:layout_column="1"
-
-        android:gravity="center" />
+ />
 
     <Spinner
         android:id="@+id/sminutes"
-        android:layout_width="99dp"
-        android:layout_height="60dp"></Spinner>
+        style="@style/SpinnerStyle"
+        ></Spinner>
 
     <Spinner
         android:id="@+id/sseconds"
-        android:layout_width="99dp"
-        android:layout_height="60dp"
+        style="@style/SpinnerStyle"
         android:layout_row="1"
         android:layout_column="3"></Spinner>
 </GridLayout>
@@ -80,39 +70,33 @@ android:textAlignment="center"
             android:textAppearance="@android:style/TextAppearance.Large"
             android:textSize="56sp"
 
-            ></TextView> </TableRow>
+            ></TextView>
+
     <TableRow
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
         android:paddingTop="300dp">
+
         <Button
             android:id="@+id/btnStart"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="10dp"
+            style="@style/BStyle"
             android:onClick="onClickStart"
             android:text="Start" />
 
         <Button
             android:id="@+id/btnStop"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
+            style="@style/BStyle"
             android:onClick="onClickStop"
             android:text="@string/pause" />
 
         <Button
             android:id="@+id/btnReset"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
+            style="@style/BStyle"
             android:onClick="onClickReset"
             android:text="@string/stop" />
-
     </TableRow>
-
+</TableRow>
 
 
 </RelativeLayout>
