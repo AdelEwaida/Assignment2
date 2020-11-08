@@ -15,7 +15,6 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
-
 import java.security.PrivilegedAction;
 import java.util.ArrayList;
 import 	java.lang.Math;
@@ -25,21 +24,23 @@ public class MainActivity extends AppCompatActivity {
     public static  final String name = "Name";
     public static  final String mass = "Mass";
     public static  final String height = "Height";
-    public static  final String gender = "Gender";
+    public static final int pos1 =0;
+    public static  final String gender = "gender";
     public static  final String bmiii = "BMI";
     private EditText nameE;
     private  EditText massE;
     private  EditText heightE;
     private EditText bmiE;
-    private Spinner genderE;
+    private Spinner gen;
+    private int genderE;
     private SharedPreferences prefrence;
     private SharedPreferences.Editor editor;
+    int spinnerPosition;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        setUpSharedPrefrence();
-        checkPref();
+
         ArrayList <String> genders = new ArrayList<>();
         genders.add("Male");
         genders.add("Female");
@@ -47,7 +48,8 @@ public class MainActivity extends AppCompatActivity {
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, genders);
         arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner1.setAdapter(arrayAdapter);
-
+        setUpSharedPrefrence();
+        checkPref();
 //        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
 
     }
@@ -63,8 +65,8 @@ private void checkPref(){
       String name1 = prefrence.getString(name,"");
       String mass1 = prefrence.getString(mass,"");
     String height1 = prefrence.getString(height,"");
-    String gender1 = prefrence.getString(gender,"");
     String bmi1 = prefrence.getString(bmiii,"");
+    String posss= prefrence.getString(gender,"" );
     nameE = findViewById(R.id.namee);
     massE = findViewById(R.id.weightTextEdit);
     heightE= findViewById(R.id.height);
@@ -73,7 +75,7 @@ private void checkPref(){
     massE.setText(mass1);
     heightE.setText(height1);
     bmiE.setText(bmi1);
-
+    spinner1.setSelection(Integer.parseInt(posss));
 }
 
     public void onClick(View view) {
@@ -96,12 +98,12 @@ private void checkPref(){
         else
             res.setText(String.valueOf((double) bmi) + "  Normal");
         Editable bmi2 = res.getText();
-        String spin = spinner1.getSelectedItem().toString();
+        int spinnerPosition1 = spinner1.getSelectedItemPosition();
         SharedPreferences.Editor editor = prefrence.edit();
         editor.putString(name, String.valueOf(name2));
         editor.putString(mass, String.valueOf(word));
         editor.putString(height, String.valueOf(word2));
-        editor.putString(gender, spin);
+        editor.putString(gender,String.valueOf(spinnerPosition1));
         editor.putString(bmiii, String.valueOf(bmi2));
         editor.commit();
     }

@@ -71,12 +71,13 @@ android:layout_height="match_parent"
             android:textSize="56sp"
 
             ></TextView>
-
+</TableRow>
     <TableRow
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="150dp"
         android:gravity="center"
-        android:paddingTop="300dp">
+        android:layout_marginTop="350dp"
+        >
 
         <Button
             android:id="@+id/btnStart"
@@ -87,16 +88,15 @@ android:layout_height="match_parent"
         <Button
             android:id="@+id/btnStop"
             style="@style/BStyle"
-            android:onClick="onClickStop"
+            android:onClick="onClickPause"
             android:text="@string/pause" />
 
         <Button
             android:id="@+id/btnReset"
             style="@style/BStyle"
-            android:onClick="onClickReset"
+            android:onClick="onClickStop"
             android:text="@string/stop" />
     </TableRow>
-</TableRow>
 
 
 </RelativeLayout>

@@ -13,7 +13,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import java.util.Locale;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -79,35 +78,40 @@ public void fillspinners(){
     arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
     spinner3.setAdapter(arrayAdapter);
 }
-int count =0;
 
         public void onClickStart(View view) {
-            if(count<=0){
                 runTimer();
-            count++;
-            }
             running = true;
         }
 
-        public void onClickStop(View view) {
-            running = false;
-        }
+        public void onClickPause(View view) {
 
-        public void onClickReset(View view) {
-            running = false;
+         running=false;
+    }
+
+        public void onClickStop(View view) {
+            running=false;
+            seconds = 0;
+
                   }
     @Override
     protected void onStart() {
         super.onStart();
-        Toast.makeText(getApplicationContext(), "onStart called", Toast.LENGTH_LONG).show();
     }
 
+    @Override
+    public void onStop() {
+        super.onStop();
+    }
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+    }
 
     @Override
     protected void onResume() {
 
         super.onResume();
-        Toast.makeText(getApplicationContext(), "onResumed called", Toast.LENGTH_LONG).show();
 
     }
     @Override
@@ -127,7 +131,12 @@ int count =0;
              final int sec1=Integer.parseInt(spin3);
             seconds=(hours1*3600)+(min1*60)+sec1;
 
+
+
+
+
             final Handler handler = new Handler();
+
             handler.post(new Runnable() {
                 @Override
                 public void run() {
@@ -145,7 +154,6 @@ int count =0;
                     else
                         --seconds;
                     }
-
                     handler.postDelayed(this, 1000);
                 }
             });

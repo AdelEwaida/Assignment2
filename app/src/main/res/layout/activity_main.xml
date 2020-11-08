@@ -94,6 +94,8 @@
                 android:text="@string/gender"
                 android:textColor="@android:color/black" />
 
+
+
         <Spinner
             android:id="@+id/genderSpinner"
             android:layout_width="149dp"
@@ -103,7 +105,10 @@
             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
             android:layout_marginBottom="10dp"
-           ></Spinner>
+           >
+
+        </Spinner>
+
     </TableRow>
     <TableRow
         android:id="@+id/row5"
